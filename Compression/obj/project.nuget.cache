@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "y3vpXQXkRukKOGzuC/FxVpTpLNAUKsUMtp9arU+yMmXsG75tr3RrYvt+81UIKCqmq/i119SPHvqxRn6m5IX0gg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rober\\github\\PCA\\Compression\\Compression.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rober\\.nuget\\packages\\accord\\3.8.0\\accord.3.8.0.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\accord.genetic\\3.8.0\\accord.genetic.3.8.0.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\accord.io\\3.8.0\\accord.io.3.8.0.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\accord.machinelearning\\3.8.0\\accord.machinelearning.3.8.0.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\accord.math\\3.8.0\\accord.math.3.8.0.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\accord.neuro\\3.8.0\\accord.neuro.3.8.0.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\accord.statistics\\3.8.0\\accord.statistics.3.8.0.nupkg.sha512",
+    "C:\\Users\\rober\\.nuget\\packages\\sharpziplib\\0.86.0\\sharpziplib.0.86.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SharpZipLib 0.86.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SharpZipLib",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
+}

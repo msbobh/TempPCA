@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConTest": {
+      "commandName": "Project",
+      "commandLineArgs": "ex7data.csv"
+    }
+  }
+}

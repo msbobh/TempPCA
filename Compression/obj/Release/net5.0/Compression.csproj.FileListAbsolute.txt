@@ -1,0 +1,16 @@
+C:\Users\rober\github\PCA\Compression\bin\Release\net5.0\Accord.dll.config
+C:\Users\rober\github\PCA\Compression\bin\Release\net5.0\Compression.deps.json
+C:\Users\rober\github\PCA\Compression\bin\Release\net5.0\Compression.dll
+C:\Users\rober\github\PCA\Compression\bin\Release\net5.0\ref\Compression.dll
+C:\Users\rober\github\PCA\Compression\bin\Release\net5.0\Compression.pdb
+C:\Users\rober\github\PCA\Compression\bin\Release\net5.0\UtilityFuncs.dll
+C:\Users\rober\github\PCA\Compression\bin\Release\net5.0\UtilityFuncs.pdb
+C:\Users\rober\github\PCA\Compression\obj\Release\net5.0\Compression.csprojAssemblyReference.cache
+C:\Users\rober\github\PCA\Compression\obj\Release\net5.0\Compression.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rober\github\PCA\Compression\obj\Release\net5.0\Compression.AssemblyInfoInputs.cache
+C:\Users\rober\github\PCA\Compression\obj\Release\net5.0\Compression.AssemblyInfo.cs
+C:\Users\rober\github\PCA\Compression\obj\Release\net5.0\Compression.csproj.CoreCompileInputs.cache
+C:\Users\rober\github\PCA\Compression\obj\Release\net5.0\Compression.csproj.CopyComplete
+C:\Users\rober\github\PCA\Compression\obj\Release\net5.0\Compression.dll
+C:\Users\rober\github\PCA\Compression\obj\Release\net5.0\ref\Compression.dll
+C:\Users\rober\github\PCA\Compression\obj\Release\net5.0\Compression.pdb
