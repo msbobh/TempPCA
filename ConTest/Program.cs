@@ -2,6 +2,8 @@
 using Compression;
 using Accord.Math;
 using Accord.IO;
+using temputils;
+
 namespace ConTest
 {
     class Program
@@ -51,7 +53,7 @@ namespace ConTest
             {
                 projectionData = reader.ToMatrix();
             }
-            //projectionData =
+            projectionData = temputils.utils.FeatureNormalization(projectionData);
 
             double[,] FacesZ = PCA.Reduce(projectionData, Dimension: k, eigenVectors: dimreduced);
             
@@ -68,10 +70,16 @@ namespace ConTest
             }
 
             double[,] zz = FacesZ.Dot(dimreduced);
+            string filename = "PCAFaces.csv";
+            using (CsvWriter writer = new CsvWriter(filename))
+            {
+                writer.Write(FacesZ);
+            }
             
 
-            
-                        
+
+
+
         }
     }
 }

@@ -5,7 +5,7 @@ using Accord.Statistics;
 namespace temputils {
 
     class utils {
-        public double [,] FeatureNormalization(in double[,] localmatrix)
+        public static double [,] FeatureNormalization(in double[,] localmatrix)
         {
             double [] Mu;
             double[] Sigma = Measures.StandardDeviation(localmatrix); // Calculate the standard deviation
