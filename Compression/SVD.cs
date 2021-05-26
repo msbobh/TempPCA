@@ -28,20 +28,36 @@ namespace Compression
         public double[][] NormalizedJagged { get; set; } //Normalized feature matrix
         public double[,] Ureduced { get; }
         public double[,] UAccordreduced { get; }
+        public double[,] PCAEignenVecs { get; }
         
 
         public  SingleValueDecomposition (in double [,] FeatureMatrix)
         {
             // need to calculate Sigma Covariance Matrix from the feature matrix after
             // it has been Normalized
-            double [,] CovarMatrix = GenerateCovarianceMatrix(FeatureMatrix);
-            //EigenvalueDecomposition EVD = new EigenvalueDecomposition(CovarMatrix);
-            //Ureduced = EVD.Eigenvectors;
+            
+            //double [,] CovarMatrix = GenerateCovarianceMatrix(FeatureMatrix);
+            System.Diagnostics.Stopwatch elapsed = new System.Diagnostics.Stopwatch();
+            /* elapsed.Start();
+            EigenvalueDecomposition EVD = new EigenvalueDecomposition(CovarMatrix);
+            Ureduced = EVD.Eigenvectors;
+            elapsed.Stop();
+            Console.WriteLine("EigenValue Decomp duration {0}", elapsed.Elapsed.ToString());
 
-            SingularValueDecomposition SVN = new SingularValueDecomposition(FeatureMatrix, computeRightSingularVectors: true, computeLeftSingularVectors: false);
+            elapsed.Reset();
+            */
+            elapsed.Start();
+            SingularValueDecomposition SVN = new SingularValueDecomposition(FeatureMatrix,
+                                    computeRightSingularVectors: true, computeLeftSingularVectors: false);
             UAccordreduced = SVN.RightSingularVectors;
-
-           
+            elapsed.Stop();
+            Console.WriteLine("SingularValue Decomposiiton Duration {0}", elapsed.Elapsed.ToString());
+            elapsed.Reset();
+            elapsed.Start();
+            PCAEignenVecs = AccordPCA(FeatureMatrix);
+            elapsed.Stop();
+            Console.Write("Accord PCA Duration: {0}", elapsed.Elapsed);
+        
         }
                 
         public double [,] GenerateCovarianceMatrix (in double [,] FeatureMatrix)
@@ -63,7 +79,7 @@ namespace Compression
          * a multi dimemsional array.
          * 
          */
-         public double [][] AccordPCA (in double [,] FeatureMatrix)
+         public double [,] AccordPCA (in double [,] FeatureMatrix)
         {
             double [][] data = externalFunc.convertToJaggedArray(FeatureMatrix);
             
@@ -76,16 +92,7 @@ namespace Compression
             // Now we can learn the linear projection from the data
             MultivariateLinearRegression transform = pca.Learn(data);
 
-            // Finally, we can project all the data
-            double[][] output1 = pca.Transform(data);
-
-            // Or just its first components by setting 
-            // NumberOfOutputs to the desired components:
-            pca.NumberOfOutputs = 1;
-
-            // And then calling transform again:
-            double[][] output2 = pca.Transform(data);
-            return output2;
+            return pca.ComponentVectors.ToMatrix();
         }
 
         public double [,] Reduce (double [,] MatrixTobeReduced, int Dimension, double [,] eigenVectors)
