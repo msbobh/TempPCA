@@ -1,0 +1,17 @@
+
+.vs/PCA/v16/.suo
+Compression/SVD.cs
+Compression/bin/Debug/net5.0/Compression.dll
+Compression/bin/Debug/net5.0/Compression.pdb
+Compression/obj/Debug/net5.0/Compression.csprojAssemblyReference.cache
+Compression/obj/Debug/net5.0/Compression.dll
+Compression/obj/Debug/net5.0/Compression.pdb
+ConTest/Properties/launchSettings.json
+ConTest/bin/Debug/net5.0/Compression.dll
+ConTest/bin/Debug/net5.0/Compression.pdb
+ConTest/bin/Debug/net5.0/ConTest.dll
+ConTest/bin/Debug/net5.0/ConTest.pdb
+ConTest/bin/Debug/net5.0/faces.csv
+ConTest/obj/Debug/net5.0/ConTest.csprojAssemblyReference.cache
+ConTest/obj/Debug/net5.0/ConTest.dll
+ConTest/obj/Debug/net5.0/ConTest.pdb
